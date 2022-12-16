@@ -1,0 +1,43 @@
+.header{
+    display: flex;
+    margin: 0 auto;
+    /*vai cada um pra um lado da pagina*/
+    justify-content: space-between;
+    /*alinhamento */
+    align-items: center;
+    /*distancia da borda, lados 40px cima e baixo 20px, 
+    nao usa margin pq se colocar n aplica background*/
+    padding: 40px 20px;
+    max-width: 1200px;
+}
+
+.header-menu{
+    display: flex;
+    gap: 10px;
+    /*quebra os items se diminuir a pagina*/
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.header-menu a{
+    font-size: 1.125rem;
+    /*espacamento entre linhas*/
+    line-height: 1.3;
+    /*melhor pra clicar com o dedo*/
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #141414;
+    display: block;
+}
+
+@media (max-width: 800px) {
+    .header{
+        flex-direction: column;
+        gap: 40px;
+        padding: 20px;
+    }
+    .header a{
+        background-color: #f5f5f5;
+        border-radius: 4px;
+    }
+}
